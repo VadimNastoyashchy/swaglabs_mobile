@@ -18,7 +18,11 @@
     "chromedriver": "^106.0.1",
     "wdio-chromedriver-service": "^8.0.0",
     "ts-node": "^10.8.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "@typescript-eslint/eslint-plugin": "5.38.1",
+    "@typescript-eslint/parser": "5.38.1",
+    "eslint": "8.24.0",
+    "eslint-plugin-wdio": "7.21.0"
   },
   "scripts": {
     "wdioAndroid": "wdio run config/wdio-android.conf.ts"

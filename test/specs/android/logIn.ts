@@ -1,10 +1,10 @@
-describe("My Login Demo", () => {
-    beforeEach(async () => {
-        await $("~open menu").click();
-        await $('//*[@text="Log In"]').click();
-    });
+describe("Log in tests", () => {
+    // beforeEach(async () => {
+    //     await $("~open menu").click();
+    //     await $('//*[@text="Log In"]').click();
+    // });
 
-    it("should not login with invalid credentials", async () => {
-
+    it("", async () => {
+        await $("~test-Username")
     });
 });
