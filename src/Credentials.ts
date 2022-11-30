@@ -14,11 +14,7 @@ export default class Credentials {
         problem: {
             userName: "problem_user",
             password: "secret_sauce"
-        },
-        performance: {
-            userName: "performance_glitch_user",
-            password: "secret_sauce"
-        },
+        }
     };
 
     public static getUserCredentials(accountType: AccountType): ICredentials {
