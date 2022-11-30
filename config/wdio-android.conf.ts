@@ -28,6 +28,7 @@ exports.config = {
         {
             platformName: "Android",
             maxInstances: 1,
+            "appium:avd" : "Pixel_3_API_29",
             "appium:deviceName": "Pixel_3_10.0",
             "appium:platformVersion": "10.0",
             "appium:orientation": "PORTRAIT",
