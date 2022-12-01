@@ -34,4 +34,4 @@ class Login {
     }
 }
 
-export const LoginPage = new Login()
+export const LoginPage = new Login();
