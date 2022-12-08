@@ -1,12 +1,14 @@
+import LoginPage from "../../../src/pages/LoginPage";
+import InventoryPage from "../../../src/pages/InventoryPage";
 import Credentials from "../../../src/Credentials";
-import {AccountType} from "../../../src/AccountType";
-import {LoginPage} from "../../../src/pages/LoginPage";
+import { AccountType } from "../../../src/AccountType";
 
 describe("Log in tests", () => {
 
     it("Log in as \"standard_user\"", async () => {
-        await LoginPage.logInWithCredentials(Credentials.getUserCredentials(AccountType.Standard));
-        const headerText = await $("//*[@text=\"PRODUCTS\"]");
-        await expect(await headerText.getText()).toEqual("PRODUCTS");
+        const loginPage = new LoginPage();
+        const inventoryPage = new InventoryPage();
+        await loginPage.logInWithCredentials(Credentials.getUserCredentials(AccountType.Standard));
+        await expect(await inventoryPage.header.productsTitle.getText()).toEqual("PRODUCTS");
     });
 });

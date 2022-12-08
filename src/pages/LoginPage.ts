@@ -1,6 +1,6 @@
 import ICredentials from "../interfaces/ICredentials";
 
-class Login {
+export default class LoginPage {
 
     private get inputEmail() {
         return $("~test-Username");
@@ -11,7 +11,7 @@ class Login {
     }
 
     private get logInButton() {
-        return $("//android.view.ViewGroup[@content-desc=\"test-LOGIN\"]/android.widget.TextView");
+        return $("//*[@text=\"LOGIN\"]");
     }
 
     private async enterEmail(userName: string) {
@@ -26,12 +26,9 @@ class Login {
         await this.logInButton.click();
     }
 
-    public async logInWithCredentials(credentials: ICredentials): Promise<void> {
-        const {userName, password} = credentials;
+    public async logInWithCredentials({ userName, password }: ICredentials) {
         await this.enterEmail(userName);
         await this.enterPassword(password);
         await this.clickOnLogInButton();
     }
 }
-
-export const LoginPage = new Login();
