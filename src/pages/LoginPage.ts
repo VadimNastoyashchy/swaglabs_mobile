@@ -23,7 +23,7 @@ export default class LoginPage {
     }
 
     private async clickOnLogInButton() {
-        await this.logInButton.click();
+        await (await this.logInButton).click();
     }
 
     public async logInWithCredentials({ userName, password }: ICredentials) {
