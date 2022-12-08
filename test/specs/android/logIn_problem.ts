@@ -8,7 +8,8 @@ describe("Log in tests", () => {
     it("Log in as \"problem_user\"", async () => {
         const loginPage = new LoginPage();
         const inventoryPage = new InventoryPage();
+
         await loginPage.logInWithCredentials(Credentials.getUserCredentials(AccountType.Problem));
-        await expect(await inventoryPage.header.productsTitle.getText()).toEqual("PRODUCTS");
+        await expect(await inventoryPage.productsTitle.getText()).toEqual("PRODUCTS");
     });
 });

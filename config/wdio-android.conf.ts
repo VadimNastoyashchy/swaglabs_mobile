@@ -6,7 +6,7 @@ exports.config = {
         autoCompile: true,
         tsNodeOpts: {
             transpileOnly: true,
-            project: "test/tsconfig.json"
+            project: "tsconfig.json"
         }
     },
     //
