@@ -12,5 +12,5 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
 });
 
 Then(/^I redirected to the inventory page with title (.*)$/, async (title) => {
-    await expect(InventoryPage.productsTitle.getText()).toEqual(title);
+    await expect(await (await InventoryPage.productsTitle).getText()).toEqual(title);
 });
