@@ -1,6 +1,6 @@
 Feature: Swaglabs app Log In
 
-  Scenario Outline: As a standard user, I can log into Swaglabs application
+  Scenario Outline: As a problem user, I can log into Swaglabs application
 
     Given I am on the login page
     When I login with <username> and <password>
@@ -8,4 +8,4 @@ Feature: Swaglabs app Log In
 
     Examples:
       | username      | password     | title    |
-      | standard_user | secret_sauce | PRODUCTS |
+      | problem_user  | secret_sauce | PRODUCTS |
