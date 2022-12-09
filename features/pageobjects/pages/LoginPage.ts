@@ -1,6 +1,5 @@
-import ICredentials from "../interfaces/ICredentials";
 
-export default class LoginPage {
+class LoginPage {
 
     private get inputEmail() {
         return $("~test-Username");
@@ -10,8 +9,12 @@ export default class LoginPage {
         return $("~test-Password");
     }
 
-    private get logInButton() {
+    public get logInButton() {
         return $("//*[@text=\"LOGIN\"]");
+    }
+
+    public get swaglabsImg() {
+        return $("//android.widget.ScrollView[@content-desc='test-Login']/android.view.ViewGroup/android.widget.ImageView[1]");
     }
 
     private async enterEmail(userName: string) {
@@ -26,9 +29,11 @@ export default class LoginPage {
         await (await this.logInButton).click();
     }
 
-    public async logInWithCredentials({ userName, password }: ICredentials) {
+    public async logInWithCredentials(userName: string, password: string) {
         await this.enterEmail(userName);
         await this.enterPassword(password);
         await this.clickOnLogInButton();
     }
 }
+
+export default new LoginPage();
