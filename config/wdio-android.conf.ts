@@ -1,4 +1,4 @@
-import {join} from "path";
+import { join } from "path";
 
 exports.config = {
 
@@ -15,7 +15,7 @@ exports.config = {
     // ====================
     //
     port: 4723,
-    specs: ["./test/specs/android/*.ts"],
+    specs: ["./features/**/*.feature"],
     // Patterns to exclude.
     exclude: [],
     //
@@ -73,10 +73,24 @@ exports.config = {
             },
         ],
     ],
-    framework: "mocha",
+    framework: "cucumber",
     reporters: ["spec"],
-    mochaOpts: {
-        ui: "bdd",
+    cucumberOpts: {
+        require: [
+            "./features/step-definitions/given.ts",
+            "./features/step-definitions/then.ts",
+            "./features/step-definitions/when.ts",
+
+        ],
+        backtrace: false,
+        requireModule: [],
+        dryRun: false,
+        failFast: false,
+        snippets: true,
+        source: true,
+        strict: false,
+        tagExpression: "",
         timeout: 60000,
+        ignoreUndefinedDefinitions: false
     },
 };

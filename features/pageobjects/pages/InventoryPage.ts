@@ -1,8 +1,7 @@
-import HeaderComponent from "../components/HeaderComponent";
 
-export default class InventoryPage {
+class InventoryPage {
 
-    public header = new HeaderComponent();
+    // public header = new HeaderComponent();
 
     private get addToCartBtn() {
         return $$("//*[@text=\"ADD TO CART\"]");
@@ -16,3 +15,5 @@ export default class InventoryPage {
         await (await this.addToCartBtn[0]).click();
     }
 }
+
+export default new InventoryPage();

@@ -3,10 +3,11 @@
         "moduleResolution": "node",
         "types": [
             "node",
-            "webdriverio/async",
-            "@wdio/mocha-framework",
-            "expect-webdriverio"
+            "@wdio/globals/types",
+            "expect-webdriverio",
+            "@wdio/cucumber-framework",
+            "@wdio/appium-service"
         ],
-        "target": "es2019"
+        "target": "es2022"
     }
 }
