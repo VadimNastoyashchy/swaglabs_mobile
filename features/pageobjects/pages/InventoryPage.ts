@@ -1,7 +1,8 @@
+import HeaderComponent from "../components/HeaderComponent";
 
 class InventoryPage {
 
-    // public header = new HeaderComponent();
+    public header = HeaderComponent;
 
     private get addToCartBtn() {
         return $$("//*[@text=\"ADD TO CART\"]");

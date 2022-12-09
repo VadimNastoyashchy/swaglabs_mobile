@@ -1,4 +1,4 @@
-import { join } from "path";
+import {join} from "path";
 
 exports.config = {
 
@@ -76,12 +76,7 @@ exports.config = {
     framework: "cucumber",
     reporters: ["spec"],
     cucumberOpts: {
-        require: [
-            "./features/step-definitions/given.ts",
-            "./features/step-definitions/then.ts",
-            "./features/step-definitions/when.ts",
-
-        ],
+        require: ["./features/step-definitions/*.ts",],
         backtrace: false,
         requireModule: [],
         dryRun: false,

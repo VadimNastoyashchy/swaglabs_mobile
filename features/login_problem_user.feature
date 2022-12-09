@@ -7,5 +7,5 @@ Feature: Swaglabs app Log In
     Then I redirected to the inventory page with title <title>
 
     Examples:
-      | username      | password     | title    |
-      | problem_user  | secret_sauce | PRODUCTS |
+      | username     | password     | title    |
+      | problem_user | secret_sauce | PRODUCTS |

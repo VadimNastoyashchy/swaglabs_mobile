@@ -1,4 +1,3 @@
-
 class LoginPage {
 
     private get inputEmail() {
