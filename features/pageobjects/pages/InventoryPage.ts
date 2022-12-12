@@ -1,10 +1,12 @@
 import HeaderComponent from "../components/HeaderComponent";
 import FilterComponent from "../components/FilterComponent";
+import FooterComponent from "../components/FooterComponent";
 
 class InventoryPage {
 
     public header = HeaderComponent;
     public filter = FilterComponent;
+    public footer = FooterComponent;
 
     private get addToCartBtn() {
         return $$("//*[@text=\"ADD TO CART\"]");
